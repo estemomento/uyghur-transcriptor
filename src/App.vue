@@ -6,17 +6,17 @@
     <div class="info">
       <h1>Uyghur Scripts Converter</h1>
       <div class="setting">
-        <select v-model="fromType">
-          <option value="uey">Uyghur Arab Script</option>
-          <option value="uyy">Uyghur New Script</option>
-          <option value="uly">Uyghur Latin Script</option>
-        </select>
+        <el-select v-model="fromType">
+          <el-option value="uey">Arab Script</el-option>
+          <el-option value="uyy">New Script</el-option>
+          <el-option value="uly">Latin Script</el-option>
+        </el-select>
         ->
-        <select v-model="toType">
-          <option value="uey">Uyghur Arab Script</option>
-          <option value="uyy">Uyghur New Script</option>
-          <option value="uly">Uyghur Latin Script</option>
-        </select>
+        <el-select v-model="toType">
+          <el-option value="uey">Arab Script</el-option>
+          <el-option value="uyy">New Script</el-option>
+          <el-option value="uly">Latin Script</el-option>
+        </el-select>
       </div>
       <div class="paste-source">
         <span><strong>UYY</strong>: Əə Ⱬⱬ Ƣƣ Ⱪⱪ Ⱨⱨ Ɵɵ Üü</span>
@@ -33,13 +33,9 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import HelloWorld from './components/HelloWorld.vue'
 import { convert } from './tools/convert'
 
 @Options({
-  components: {
-    HelloWorld
-  },
   data: () => ({
     origin: '',
     converted: '',

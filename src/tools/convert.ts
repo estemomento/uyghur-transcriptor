@@ -1,43 +1,45 @@
-const dict = [
-  { uey: 'ئ', uyy: '\'', uly: '\'' },
-  { uey: 'ا', uyy: 'a', uly: 'a' },
-  { uey: 'ە', uyy: 'ə', uly: 'e' },
-  { uey: 'ب', uyy: 'b', uly: 'b' },
-  { uey: 'پ', uyy: 'p', uly: 'p' },
-  { uey: 'ت', uyy: 't', uly: 't' },
-  { uey: 'ج', uyy: 'j', uly: 'j' },
-  { uey: 'چ', uyy: 'q', uly: 'ch' },
-  { uey: 'خ', uyy: 'h', uly: 'x' },
-  { uey: 'د', uyy: 'd', uly: 'd' },
-  { uey: 'ر', uyy: 'r', uly: 'r' },
-  { uey: 'ز', uyy: 'z', uly: 'z' },
-  { uey: 'ژ', uyy: 'ⱬ', uly: 'zh' },
-  { uey: 'س', uyy: 's', uly: 's' },
-  { uey: 'ش', uyy: 'x', uly: 'sh' },
-  { uey: 'غ', uyy: 'ƣ', uly: 'gh' },
-  { uey: 'ف', uyy: 'f', uly: 'f' },
-  { uey: 'ق', uyy: 'ⱪ', uly: 'q' },
-  { uey: 'ك', uyy: 'k', uly: 'k' },
-  { uey: 'گ', uyy: 'g', uly: 'g' },
-  { uey: 'ڭ', uyy: 'ng', uly: 'ng' },
-  { uey: 'ل', uyy: 'l', uly: 'l' },
-  { uey: 'م', uyy: 'm', uly: 'm' },
-  { uey: 'ن', uyy: 'n', uly: 'n' },
-  { uey: 'ھ', uyy: 'ⱨ', uly: 'h' },
-  { uey: 'و', uyy: 'o', uly: 'o' },
-  { uey: 'ۇ', uyy: 'u', uly: 'u' },
-  { uey: 'ۆ', uyy: 'ɵ', uly: 'ö' },
-  { uey: 'ۈ', uyy: 'ü', uly: 'ü' },
-  { uey: 'ۋ', uyy: 'w', uly: 'w' },
-  { uey: 'ې', uyy: 'e', uly: 'ë' },
-  { uey: 'ى', uyy: 'i', uly: 'i' },
-  { uey: 'ي', uyy: 'y', uly: 'y' },
+const dict = {
+  '\'': { uey: 'ئ', uyy: '\'', uly: '\'' },
+  a: { uey: 'ا', uyy: 'a', uly: 'a' },
+  e: { uey: 'ە', uyy: 'ə', uly: 'e' },
+  b: { uey: 'ب', uyy: 'b', uly: 'b' },
+  p: { uey: 'پ', uyy: 'p', uly: 'p' },
+  t: { uey: 'ت', uyy: 't', uly: 't' },
+  j: { uey: 'ج', uyy: 'j', uly: 'j' },
+  ch: { uey: 'چ', uyy: 'q', uly: 'ch' },
+  x: { uey: 'خ', uyy: 'h', uly: 'x' },
+  d: { uey: 'د', uyy: 'd', uly: 'd' },
+  r: { uey: 'ر', uyy: 'r', uly: 'r' },
+  z: { uey: 'ز', uyy: 'z', uly: 'z' },
+  zh: { uey: 'ژ', uyy: 'ⱬ', uly: 'zh' },
+  s: { uey: 'س', uyy: 's', uly: 's' },
+  sh: { uey: 'ش', uyy: 'x', uly: 'sh' },
+  gh: { uey: 'غ', uyy: 'ƣ', uly: 'gh' },
+  f: { uey: 'ف', uyy: 'f', uly: 'f' },
+  q: { uey: 'ق', uyy: 'ⱪ', uly: 'q' },
+  k: { uey: 'ك', uyy: 'k', uly: 'k' },
+  g: { uey: 'گ', uyy: 'g', uly: 'g' },
+  ng: { uey: 'ڭ', uyy: 'ng', uly: 'ng' },
+  l: { uey: 'ل', uyy: 'l', uly: 'l' },
+  m: { uey: 'م', uyy: 'm', uly: 'm' },
+  n: { uey: 'ن', uyy: 'n', uly: 'n' },
+  h: { uey: 'ھ', uyy: 'ⱨ', uly: 'h' },
+  o: { uey: 'و', uyy: 'o', uly: 'o' },
+  u: { uey: 'ۇ', uyy: 'u', uly: 'u' },
+  oe: { uey: 'ۆ', uyy: 'ɵ', uly: 'ö' },
+  ue: { uey: 'ۈ', uyy: 'ü', uly: 'ü' },
+  w: { uey: 'ۋ', uyy: 'w', uly: 'w' },
+  ee: { uey: 'ې', uyy: 'e', uly: 'ë' },
+  i: { uey: 'ى', uyy: 'i', uly: 'i' },
+  y: { uey: 'ي', uyy: 'y', uly: 'y' },
 
-  { uey: '،', uyy: ',', uly: ',' },
-  { uey: 'ـ', uyy: '-', uly: '-' }
-] as const
+  ',': { uey: '،', uyy: ',', uly: ',' },
+  '-': { uey: 'ـ', uyy: '-', uly: '-' },
+  ';': { uey: '؛', uyy: ';', uly: ';' },
+  '?': { uey: '؟', uyy: '?', uly: '?' }
+} as const
 
-type ScriptType = keyof typeof dict[0]
+type ScriptType = keyof typeof dict.a
 
 export function convert (str: string, from: ScriptType, to: ScriptType) {
   if (from === to) return str
@@ -82,7 +84,7 @@ export function convert (str: string, from: ScriptType, to: ScriptType) {
         }
       }
     }
-    for (const item of dict) { // Perform dict matching
+    for (const [index, item] of Object.entries(dict)) { // Perform dict matching
       if (item[from] === matcher) return extraPrefix + (isUpper ? item[to].toUpperCase() : item[to])
     }
     return v
