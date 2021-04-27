@@ -75,6 +75,10 @@ export function convert (str: string, from: ScriptType, to: ScriptType) {
           console.log('delete \'', from, to)
           strArr[i + 1] = ''
         }
+        if (v.toLowerCase() === 'z' && strArr[i + 1] === '\'' && strArr[i + 2] && strArr[i + 2].toLowerCase() === 'h' && to === 'uey') { // deal with z'h
+          console.log('delete \'', from, to)
+          strArr[i + 1] = ''
+        }
       }
       if (from === 'uyy') {
         if (v.toLowerCase() === 'n' && strArr[i + 1].toLowerCase() === 'g') { matcher = 'ng'; strArr.splice(i + 1, 1) }
